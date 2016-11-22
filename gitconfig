@@ -1,0 +1,38 @@
+[core]
+	excludesfile = /Users/kli/.gitignore
+	autocrlf = input
+	editor = vim
+
+[color]
+    diff = auto
+    branch = auto
+    status = auto
+	ui = true
+
+[user]
+	name = Kevin Li
+	email = kli@gilt.com
+
+[push]
+	default = simple
+
+[alias]
+	### eg
+    #st = !git status
+    #up = !git fetch --tags & git status
+    #ci = !git commit -a
+
+[branch]
+    autosetupbase = always
+	autosetuprebase = always
+
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	s = status -s
+    lg = log --oneline --decorate --all --graph
+    owner = shortlog -s -n
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
