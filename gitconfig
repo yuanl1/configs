@@ -14,25 +14,24 @@
 	email = kli@gilt.com
 
 [push]
-	default = simple
+	default = current
 
 [alias]
-	### eg
+    ### eg
     #st = !git status
     #up = !git fetch --tags & git status
     #ci = !git commit -a
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk
+    s = status -s
+    lg = log --oneline --decorate --all --graph
+    owner = shortlog -s -n
 
 [branch]
     autosetupbase = always
 	autosetuprebase = always
 
-[alias]
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
-	s = status -s
-    lg = log --oneline --decorate --all --graph
-    owner = shortlog -s -n
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
